@@ -1,9 +1,16 @@
-package domain;
+package domain.table;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 치킨집 내의 모든 테이블을 제공하는 저장소
+ *
+ * @version 1.0.0
+ * @author KSKIM
+ * @since 2019-12-26
+ */
 public class TableRepository {
     private static final List<Table> tables = new ArrayList<>();
 
