@@ -1,21 +1,21 @@
-import domain.Menu;
-import domain.MenuRepository;
-import domain.Table;
-import domain.TableRepository;
-import view.InputView;
-import view.OutputView;
+import controller.ChickenHouse;
+import domain.menu.MenuRepository;
+import domain.menu.Menus;
+import domain.table.TableRepository;
+import domain.table.Tables;
 
-import java.util.List;
-
+/**
+ * 프로그램을 실행하는 진입부
+ *
+ * @version 1.0.0
+ * @author KSKIM
+ * @since 2019-12-26
+ */
 public class Application {
-    // TODO 구현 진행
     public static void main(String[] args) {
-        final List<Table> tables = TableRepository.tables();
-        OutputView.printTables(tables);
-
-        final int tableNumber = InputView.inputTableNumber();
-
-        final List<Menu> menus = MenuRepository.menus();
-        OutputView.printMenus(menus);
+        final Tables tables = new Tables(TableRepository.tables());
+        final Menus menus = new Menus(MenuRepository.menus());
+        ChickenHouse chickenHouse = new ChickenHouse(tables, menus);
+        chickenHouse.run();
     }
 }
