@@ -1,9 +1,16 @@
-package domain;
+package domain.menu;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 치킨집이 판매하는 메뉴를 의미하는 객체
+ *
+ * @version 1.0.0
+ * @author KSKIM
+ * @since 2019-12-26
+ */
 public class MenuRepository {
     private static final List<Menu> menus = new ArrayList<>();
 
